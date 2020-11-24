@@ -5,3 +5,8 @@ Feature:Categoria Comics
     Given El usuario se encuentra el pagina de home
     When Cuando el usuario hace click en  THE LITTLE TESTER COMICS
     Then Se debe redirigir a la pantalla comics
+
+  Scenario: Ingresar a la categoria comics desde el home
+    Given El usuario se encuentra el pagina de home
+    When Cuando el usuario hace click en  THE LITTLE TESTER COMICS
+    Then Se debe redirigir a la pantalla comics

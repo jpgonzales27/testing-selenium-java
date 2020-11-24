@@ -11,18 +11,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test {
-    private ChromeDriver driver;
+    private ChromeDriver driver = Hooks.getDriver();
 
     @Given("^El usuario se encuentra el pagina de home$")
     public void el_usuario_se_encuentra_el_pagina_de_home() throws Throwable {
-        //Seteamos nuestras propiedades
-        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver/chromedriver.exe");
-        //Instanciamos nuestro driver
-        driver = new ChromeDriver();
-        //url de la pagina web a testeas
-        driver.get("https://imalittletester.com/");
-        //maximizamos la pantalla
-        driver.manage().window().maximize();
+        String pageTitle = "imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.";
+        //driver.getTitle = obtenemos el titulo de la pagina web
+        Assert.assertEquals(pageTitle,driver.getTitle());
     }
 
     @When("^Cuando el usuario hace click en  THE LITTLE TESTER COMICS$")
@@ -42,8 +37,6 @@ public class Test {
         Assert.assertTrue("NO se redirecciono correctamente",pageTitle.isDisplayed());
         //assertequals para comparar el texto que esperamos con el que obentemos del web element
         Assert.assertEquals("Category: comics",pageTitle.getText());
-        //cerramos el navegador
-        driver.quit();
 
     }
 
