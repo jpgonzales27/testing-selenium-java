@@ -1,6 +1,6 @@
 package seleniumgluecode;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test {
-    private ChromeDriver driver = Hooks.getDriver();
+    private WebDriver driver = Hooks.getDriver();
 
     @Given("^El usuario se encuentra el pagina de home$")
     public void el_usuario_se_encuentra_el_pagina_de_home() throws Throwable {

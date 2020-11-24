@@ -2,22 +2,26 @@ package seleniumgluecode;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import runner.browser_manager.DriverManager;
+import runner.browser_manager.DriverManagerFactory;
+import runner.browser_manager.DriverType;
 
 public class Hooks {
 
-    private static ChromeDriver driver;
+    private static WebDriver driver;
     private static int numberCase = 0;
+    private DriverManager driverManager;
 
     //@Before metodo que se ejecutara al inicio del escenario
     @Before
     public void setup(){
         numberCase++;
         System.out.println("Se esta ejecutando el caso numero: "+numberCase);
-        //Seteamos nuestras propiedades
-        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver/chromedriver.exe");
-        //Instanciamos nuestro driver
-        driver = new ChromeDriver();
+        //Instanciamos nuestro factory
+        driverManager = DriverManagerFactory.getManager(DriverType.FIREFOX);
+        //indicamos que usaremos la interfaz de chrome
+        driver = driverManager.getDriver();
         //url de la pagina web a testeas
         driver.get("https://imalittletester.com/");
         //maximizamos la pantalla
@@ -29,10 +33,10 @@ public class Hooks {
     public void tearDown(){
         System.out.println("El escenario nro: "+numberCase+" se ejecuto correctamente");
         //cerramos el navegador
-        driver.quit();
+        driverManager.quitDriver();
     }
 
-    public static ChromeDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 }
