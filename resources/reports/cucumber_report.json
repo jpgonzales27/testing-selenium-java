@@ -1,0 +1,80 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9993599200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Ingresar a la categoria comics desde el home",
+        "description": "",
+        "id": "categoria-comics;ingresar-a-la-categoria-comics-desde-el-home",
+        "after": [
+          {
+            "result": {
+              "duration": 690392600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 257896700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "El usuario se encuentra el pagina de home",
+            "match": {
+              "location": "Test.el_usuario_se_encuentra_el_pagina_de_home()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2270300000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Cuando el usuario hace click en  THE LITTLE TESTER COMICS",
+            "match": {
+              "location": "Test.cuando_el_usuario_hace_click_en_THE_LITTLE_TESTER_COMICS()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 66748100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Se debe redirigir a la pantalla comics",
+            "match": {
+              "location": "Test.se_debe_redirigir_a_la_pantalla_comics()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Categoria Comics",
+    "description": "Como usuario quiero leer chistes de testers",
+    "id": "categoria-comics",
+    "keyword": "Feature",
+    "uri": "test.feature"
+  }
+]

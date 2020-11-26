@@ -1,0 +1,23 @@
+{
+  "name": "cucumber_selenium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report" : "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpgonzales27/testing-selenium-java.git"
+  },
+  "author": "Juan Pablo Gonzales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpgonzales27/testing-selenium-java/issues"
+  },
+  "homepage": "https://github.com/jpgonzales27/testing-selenium-java#readme",
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  }
+}

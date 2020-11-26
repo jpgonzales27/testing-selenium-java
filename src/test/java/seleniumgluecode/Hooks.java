@@ -19,7 +19,7 @@ public class Hooks {
         numberCase++;
         System.out.println("Se esta ejecutando el caso numero: "+numberCase);
         //Instanciamos nuestro factory
-        driverManager = DriverManagerFactory.getManager(DriverType.FIREFOX);
+        driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         //indicamos que usaremos la interfaz de chrome
         driver = driverManager.getDriver();
         //url de la pagina web a testeas

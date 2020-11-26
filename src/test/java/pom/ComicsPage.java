@@ -2,6 +2,8 @@ package pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class ComicsPage extends BasePage {
 
@@ -9,7 +11,10 @@ public class ComicsPage extends BasePage {
         super(driver);
     }
 
-    private By titleComicsLocator = By.className("page-title");
+    //usamos findBy para enlazar los elementos
+    @FindBy(className = "page-title")
+    private WebElement titleComicsLocator;
+
     private String tituloCategory = "Category: comics";
 
     public boolean isTitleComicsDisplayed() throws Exception{

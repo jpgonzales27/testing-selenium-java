@@ -2,12 +2,16 @@ package pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 
 public class HomePage extends BasePage {
 
     private String pageTitle = "imalittletester – Testing. With Java, Selenium, TestNG, Maven, Spring, IntelliJ and friends.";
-    private By menuItemLocator = By.id("menu-item-2008");;
+
+    @FindBy(id = "menu-item-2008")
+    private WebElement menuItemLocator;;
 
     public HomePage(WebDriver driver) {
         super(driver);
